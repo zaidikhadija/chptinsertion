@@ -1,0 +1,14 @@
+PROCEDURE insertion_sort(VAR T : ARRAY_OF INTEGER)
+VAR
+    i,j,temp : INTEGER;
+BEGIN
+    FOR i FROM 1 TO T.length-1 DO
+        temp := T[i];
+        j := i-1;
+        WHILE (j >= 0 AND T[j] > temp) DO
+            T[j+1] := T[j];
+            j := j-1;
+        END_WHILE
+        T[j+1] = temp;
+    END_FOR
+END 
